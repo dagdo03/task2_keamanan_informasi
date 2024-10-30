@@ -1,4 +1,3 @@
-# Tabel angka yang digunakan dalam proses initial permutation
 initial_perm = [58, 50, 42, 34, 26, 18, 10, 2,
 				60, 52, 44, 36, 28, 20, 12, 4,
 				62, 54, 46, 38, 30, 22, 14, 6,
@@ -8,8 +7,6 @@ initial_perm = [58, 50, 42, 34, 26, 18, 10, 2,
 				61, 53, 45, 37, 29, 21, 13, 5,
 				63, 55, 47, 39, 31, 23, 15, 7]
 
-# Tabel angka yang digunakan untuk Expansion D-box Table = mengekspansi dari 32 bit menjadi 48 bits agar dapat di xor dengan round key
-# ada yang diduplikat buat ekspansinya, seperti 4, 5, 8, 9, dll
 exp_d = [32, 1, 2, 3, 4, 5, 4, 5,
 		6, 7, 8, 9, 8, 9, 10, 11,
 		12, 13, 12, 13, 14, 15, 16, 17,
@@ -17,7 +14,6 @@ exp_d = [32, 1, 2, 3, 4, 5, 4, 5,
 		22, 23, 24, 25, 24, 25, 26, 27,
 		28, 29, 28, 29, 30, 31, 32, 1]
 
-# Permutation Table (Transposition P-Box)
 per = [16, 7, 20, 21,
 	29, 12, 28, 17,
 	1, 15, 23, 26,
@@ -27,7 +23,6 @@ per = [16, 7, 20, 21,
 	19, 13, 30, 6,
 	22, 11, 4, 25]
 
-# S-box Table
 sbox = [[[14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
 		[0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8],
 		[4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0],
@@ -68,7 +63,6 @@ sbox = [[[14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7],
 		[7, 11, 4, 1, 9, 12, 14, 2, 0, 6, 10, 13, 15, 3, 5, 8],
 		[2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11]]]
 
-# Tabel angka untuk mengoperasikan final permutation yang akan mengoutputkan chiper text
 final_perm = [40, 8, 48, 16, 56, 24, 64, 32,
 			39, 7, 47, 15, 55, 23, 63, 31,
 			38, 6, 46, 14, 54, 22, 62, 30,
@@ -78,7 +72,6 @@ final_perm = [40, 8, 48, 16, 56, 24, 64, 32,
 			34, 2, 42, 10, 50, 18, 58, 26,
 			33, 1, 41, 9, 49, 17, 57, 25]
 
-# Tabel angka yang digunakan untuk menjadikan 64 bit initial key menjadi 56 bit efektif key
 keyp = [57, 49, 41, 33, 25, 17, 9,
 		1, 58, 50, 42, 34, 26, 18,
 		10, 2, 59, 51, 43, 35, 27,
@@ -88,14 +81,11 @@ keyp = [57, 49, 41, 33, 25, 17, 9,
 		14, 6, 61, 53, 45, 37, 29,
 		21, 13, 5, 28, 20, 12, 4]
 
-# Tabel yang berisi angka-angka yang dipakai untuk melakukan shift table
-# setiap bit ke 1, 2, 9, 16 geser 1 posisi
 shift_table = [1, 1, 2, 2,
 			2, 2, 2, 2,
 			1, 2, 2, 2,
 			2, 2, 2, 1]
 
-# Key- Compression Table : mengkompres dari 56 bit menjadi 48 bit
 key_comp = [14, 17, 11, 24, 1, 5,
 			3, 28, 15, 6, 21, 10,
 			23, 19, 12, 4, 26, 8,
